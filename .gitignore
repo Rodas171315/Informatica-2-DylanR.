@@ -3,10 +3,10 @@
 *.~lock.*
 *.aux
 *.out
+*.log
 *.synctex.gz
 *.fdb_latexmk
 *.fls
-*.log
 *.nav
 *.snm
 *.toc
