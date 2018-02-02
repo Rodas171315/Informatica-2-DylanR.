@@ -1,0 +1,57 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{extramarks}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{listings}
+\usepackage{courier}
+\usepackage{multirow}
+\usepackage{hyperref}
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\author{Dylan Rodas}
+\title{Tarea Filo 1}
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+
+\begin{document}
+
+	\begin{tabular}{l l}
+     \multirow{5}{*}{\includegraphics[width=2cm]{D:/Documentos/UNIS/Logo_UNIS.png}} & Universidad del Istmo de Guatemala \\
+     & Facultad de Ingenier\'ia \\
+     & Ing. en Sistemas \\
+     & Inform\'atica 2 \\
+     & Dylan Gabriel Rodas Samayoa - \href{mailto:rodas171315@unis.edu.gt}{rodas171315@unis.edu.gt} \\
+    \end{tabular}
+	\\\    
+	
+    \begin{center}
+        \horrule{0.5pt}
+        \huge{Hoja de Trabajo \#2} \\
+        \large{1 de Febrero, 2018} \\
+        \horrule{1pt}
+	\end{center}
+	\
+	\begin{center}
+	\section*{Ejercicio \#5: Confusi\'on}
+	\end{center}
+	\
+	\section*{¿A qu\'e se debe ese extraño resultado?}
+
+\item{Como primera observaci\'on, en la cuarta l\'inea, hay un punto donde deber\'ia haber una coma, as\'i que, el c\'odigo no va a compilar.}
+\item{Como segunda observaci\'on, al usar un operador condicional (? :) es un operador ternario (toma tres operandos). El operador condicional funciona del modo siguiente:}
+
+	\begin{itemize}
+\item{El primer operando se convierte implícitamente a bool. Se evalúa y todos los efectos secundarios se completan antes de continuar.}
+\item{Si el primer operando se evalúa como true (1), se evalúa el segundo operando.}
+\item{Si el primer operando se evalúa como false (0), se evalúa el tercer operando.}
+    \end{itemize}
+
+\end{document}
