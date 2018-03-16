@@ -29,7 +29,7 @@ namespace IList
         public int Length
         { get
             {
-                Ilist<T> lista = this;
+                IList<T> lista = this;
                 int length = 0;
 
                 while(lista.Resto != null)

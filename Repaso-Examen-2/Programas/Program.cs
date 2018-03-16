@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Genericos
+namespace Programas
 {
     class Program
     {
