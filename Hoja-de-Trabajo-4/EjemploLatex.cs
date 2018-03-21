@@ -12,15 +12,18 @@ class EjemploLatex
 
     public static void Prueba()
     {
-        //Hay un grave error ya que el programa lanzara una excepcion en tiempo
-        //de ejecucion al intentar castear una cadena a un entero
-        string[] valores = new string[] { "hola", "mundo" };
-        int resultado = (int)Head(valores);
+        //Esto provoca un error en tiempo de compilacion, debido a una excepcion
+        //de casteo no valido por intentar castear una cadena a un entero.
+        string[] valoresStr = new string[];
+        valoresStr.Add("Enero");
+        valoresStr.Add("Diciembre");
+        int resultado = (int)Head(valoresStr);
 
-        //A diferencia del metodo generico, el cual me permite mantener un control 
-        //del tipo de dato que se obtendra y no hay mas necesidad de seguir
-        //casteando los objetos
-        int[] valoresInt = new int[] { 1, 2, 3, 4 };
-        int resultadoInt = HeadGenerico(valoresInt);
+        //Pero el metodo generico, permite mantener un control del tipo de dato
+        //que se obtendra y no hay necesidad de boxing, ni casteo.
+        int[] valoresInt = new int[];
+        valoresInt.Add(2017);
+        valoresInt.Add(2018);
+        int resultadoInt = HeadGenerico(valoresInt);   
     }
 }
