@@ -1,46 +1,16 @@
 using System;
+using System.Collections.Generic;
 
 namespace IList
 {
-    public interface IList<T>
+    public interface IList<T> where T: new()
     {
-        public bool Get(int indice, out int resultado)
-        {
-            
-        }
+        public bool Get(int indice, out T resultado);
 
-        public bool Set(int indice, T elemento)
-        {
-
-        }
+        public bool Set(int indice, T elemento);
         
-        public void Push(T elemento)
-        {
-            IList<T> lista = this;
+        public void Push(T elemento);
 
-            while(lista.Resto != null)
-            {
-                lista = lista.Resto;
-            }
-
-            lista.Resto = new IList<T>(elemento);            
-        }
-
-        public int Length
-        { get
-            {
-                IList<T> lista = this;
-                int length = 0;
-
-                while(lista.Resto != null)
-                {
-                    lista = lista.Resto;
-                    length++;
-                }
-            }
-                return length;                
-            }
-        }
-
+        public int Length{ get; }
     }
 }

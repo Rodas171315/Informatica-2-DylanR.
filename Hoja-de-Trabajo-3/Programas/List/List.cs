@@ -1,28 +1,26 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace List
 {
-    class Program
+    public abstract class Lista<T> : IList<T> where T : new()
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
-    }
-
-    abstract class Lista
-    {
-        public void Push()
-        {
-            
-        }
-    }
-
-    public class ArrayList : IList<T>
-    {
-        T almacenamiento {get; private set;}
+        public abstract bool Get(int indice, out T resultado);
         
-        int [] Arreglo = new int [almacenamiento.Legth + 1]
-
+        public abstract bool Set(int indice, T elemento);
+        
+        public abstract int Length();
+        
+        public abstract void Push(T elemento);
+        
+        public abstract void Push(IList<T> elemento)
+        {
+            for (int i = 0; i < elemento.Length; i++)
+            {
+                T nuevo = new T();
+                elemento.Get(indice, out nuevo);
+                Push(nuevo);
+            }
+        }        
     }
 }

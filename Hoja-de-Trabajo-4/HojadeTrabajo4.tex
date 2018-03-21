@@ -1,0 +1,103 @@
+\documentclass[10pt,a4paper]{article}
+
+    \usepackage{fancyhdr}
+    \usepackage{lastpage}
+    \usepackage{extramarks}
+    \usepackage[spanish]{babel}
+    \usepackage{amsmath}
+    \usepackage{amsfonts}
+    \usepackage{amssymb}
+    \usepackage{graphicx}
+    \usepackage[usenames,dvipsnames]{color}
+    \usepackage{listings}
+    \usepackage{courier}
+    \usepackage{multirow}
+    \usepackage{hyperref}
+    
+    \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+    
+    % Margins
+    \topmargin=-0.45in
+    \evensidemargin=0in
+    \oddsidemargin=0in
+    \textwidth=6.5in
+    \textheight=9.0in
+    \headsep=0.25in
+
+    \linespread{1.1} % Line spacing
+
+    \definecolor{MyDarkGreen}{rgb}{0.0,0.4,0.0} % This is the color used for comments
+    \lstloadlanguages{c} % Load Perl syntax for listings, for a list of other languages supported see: ftp://ftp.tex.ac.uk/tex-archive/macros/latex/contrib/listings/listings.pdf
+    \lstset{language=[sharp]c, % Use Perl in this example
+        frame=single, % Single frame around code
+        basicstyle=\small\ttfamily, % Use small true type font
+        keywordstyle=[1]\color{Blue}\bf, % Perl functions bold and blue
+        keywordstyle=[2]\color{Purple}, % Perl function arguments purple
+        keywordstyle=[3]\color{Blue}\underbar, % Custom functions underlined and blue
+        identifierstyle=, % Nothing special about identifiers                                         
+        commentstyle=\usefont{T1}{pcr}{m}{sl}\color{MyDarkGreen}\small, % Comments small dark green courier font
+        stringstyle=\color{Purple}, % Strings are purple
+        showstringspaces=false, % Don't put marks in string spaces
+        tabsize=5, % 5 spaces per tab
+        %
+        % Put standard Perl functions not included in the default language here
+        morekeywords={rand},
+        %
+        % Put Perl function parameters here
+        morekeywords=[2]{on, off, interp},
+        %
+        % Put user defined functions here
+        morekeywords=[3]{test},
+       	%
+        morecomment=[l][\color{Blue}]{...}, % Line continuation (...) like blue comment
+        numbers=left, % Line numbers on left
+        firstnumber=1, % Line numbers start with line 1
+        numberstyle=\tiny\color{Blue}, % Line numbers are blue and small
+        stepnumber=5 % Line numbers go in steps of 5
+    }
+    
+    \author{Dylan Rodas}
+    \title{HojaDeTrabajo4}
+    
+    \newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+    \newcommand{\perlscript}[2]{
+	\begin{itemize}
+	\item[]\lstinputlisting[caption=#2,label=#1]{#1.cs}
+	\end{itemize}
+	}
+	
+    \begin{document}
+    
+        \begin{tabular}{l l}
+         \multirow{5}{*}{\includegraphics[width=2cm]{D:/Documentos/UNIS/Logo_UNIS.png}} & Universidad del Istmo de Guatemala \\
+         & Facultad de Ingenier\'ia \\
+         & Ing. en Sistemas \\
+         & Inform\'atica 2 \\
+         & Dylan Gabriel Rodas Samayoa - \href{mailto:rodas171315@unis.edu.gt}{rodas171315@unis.edu.gt} \\
+        \end{tabular}
+        \\\    
+        
+        \begin{center}
+            \horrule{0.5pt}
+            \huge{Hoja de Trabajo \#4} \\
+            \large{17 de Marzo, 2018} \\
+            \horrule{1pt}
+        \end{center}
+        \
+        \begin{center}
+        \section*{Ejercicio \#4:}
+        \end{center}
+        \
+        \section*{Ventajas del m\'etodo Head con Gen\'ericos}
+
+Al permitirle especificar los tipos concretos sobre los que act\'ua una clase o m\'etodo gen\'erico, la caracter\'istica de gen\'ericos traspasa la carga de la seguridad de tipos al compilador. No hay ninguna necesidad de escribir c\'odigo para comprobar que el tipo de datos es correcto, porque esto se hace en tiempo de compilaci\'on. Se reduce la necesidad de convertir los tipos y la posibilidad de que se produzcan errores en tiempo de ejecuci\'on.
+\\\\
+Los gen\'ericos proporcionan seguridad de tipos sin el trabajo extra de realizar de varias implementaciones. No hay necesidad de heredar de un tipo base y reemplazar los miembros. Adem\'as de la seguridad de tipos, los tipos de colecci\'on gen\'ericos suelen conseguir mejor rendimiento para almacenar y manipular tipos de valor porque no hay necesidad de realizar conversiones de los tipos de valor.
+\\\\
+Los delegados gen\'ericos habilitan las devoluciones de llamada con seguridad de tipos sin la necesidad de crear varias clases de delegado. Los delegados gen\'ericos tambi\'en se pueden utilizar en c\'odigo generado din\'amicamente sin que sea necesario generar un tipo de delegado. Esto aumenta el n\'umero de escenarios en los que puede utilizar m\'etodos din\'amicos ligeros en lugar de generar ensamblados completos.
+\\\\
+En muchos casos, los compiladores de Visual Basic, Visual C++ y C\# pueden determinar a partir del contexto los tipos que se utilizan en una llamada de m\'etodo gen\'erico, lo que simplifica enormemente la sintaxis cuando se utilizan m\'etodos gen\'ericos. Por ejemplo, en el c\'odigo siguiente se puede observar como se mejora el rendimiento implementando gen\'ericos:
+
+        \perlscript{EjemploLatex}{}
+        
+    \end{document}
