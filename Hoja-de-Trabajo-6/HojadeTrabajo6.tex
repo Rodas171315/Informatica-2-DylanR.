@@ -1,0 +1,137 @@
+\documentclass[10pt,a4paper]{article}
+
+    \usepackage{fancyhdr}
+    \usepackage{lastpage}
+    \usepackage{extramarks}
+    \usepackage[utf8]{inputenc}
+    \usepackage[spanish]{babel}
+    \usepackage{amsmath}
+    \usepackage{amsfonts}
+    \usepackage{amssymb}
+    \usepackage{graphicx}
+    \usepackage[usenames,dvipsnames]{color}
+    \usepackage{listings}
+    \usepackage{courier}
+    \usepackage{multirow}
+    \usepackage{hyperref}
+    
+    \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+    
+    \author{Dylan Rodas}
+    \title{HojaDeTrabajo6}
+    
+    \newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+    
+    \begin{document}
+    
+        \begin{tabular}{l l}
+         \multirow{5}{*}{\includegraphics[width=2cm]{D:/Documentos/UNIS/Logo_UNIS.png}} & Universidad del Istmo de Guatemala \\
+         & Facultad de Ingenieria \\
+         & Ing. en Sistemas \\
+         & Informatica 2 \\
+         & Dylan Gabriel Rodas Samayoa - \href{mailto:rodas171315@unis.edu.gt}{rodas171315@unis.edu.gt} \\
+        \end{tabular}
+        \\\    
+        
+        \begin{center}
+            \horrule{0.5pt}
+            \huge{Hoja de Trabajo \#6} \\
+            \large{25 de Marzo, 2018} \\
+            \horrule{1pt}
+        \end{center}
+    
+        \begin{center}
+        \section*{Resoluci\'on Ejercicio \#1}
+        \section*{Definici\'on Recursiva}
+        \end{center}
+
+        \begin{itemize}
+            \item\textit{Dado un numero n que pertenece a los numero naturales unitarios y que este sea un n sucesor de cero ($\sigma n(0) = n$).}
+            \item\textit{Y cero (0) el primer numero de los numeros naturales unitarios.}
+        \end{itemize}
+    
+        \section*{Suma de dos n\'umeros}
+        
+        Caso base: 
+        \begin{center}
+        $n + 0 = n$\\
+        $\sigma(n) + m = \sigma(n+m)$
+        \end{center}
+        Caso inductivo:
+        \begin{center}
+        $\sigma(\sigma(\sigma(0))) + \sigma(\sigma(0))$\\
+        $\sigma(\sigma(\sigma(0)) +\sigma(\sigma(0))) $\\
+        $\sigma(\sigma(\sigma(0) +\sigma(\sigma(0)))) $\\
+        $\sigma(\sigma(\sigma(0 +\sigma(\sigma(0))))) $\\
+        $\sigma(\sigma(\sigma(\sigma(\sigma(0)))))$
+        \end{center}
+        \emph{De manera que:\\
+        $\sigma(n) = a$, $m = b$, $\sigma(n+m)= c$}
+    
+        \section*{Multiplicaci\'on de dos n\'umeros}
+        
+        Caso base: 
+        \begin{center}
+        $n * 0 =0$\\
+        $\sigma(n) * m = \sigma((n)*m) +m$\\
+        $\sigma(0) * n = \sigma(0 + n)$\\
+        \end{center}
+        Caso inductivo:
+        \begin{center}
+		$(\sigma(0) * \sigma(\sigma(0))$\\
+		$\sigma(0) + \sigma(0) + \sigma(\sigma(0))veces...+\sigma(0)$\\
+		$\sigma(0) + [\sigma(0) + \sigma(\sigma(0))veces...+\sigma(0)] $\\
+		$\sigma(0)+ [\sigma(0) * (\sigma(0)] $\\
+		$\sigma(\sigma(0))$
+        \end{center}
+        \emph{De manera que:\\
+        $\sigma(n) = a$, $m = b$, $\sigma(n*m) = c$}
+            
+        \section*{Mayor que para n\'umeros unitarios}
+        
+        Caso base: 
+        \begin{itemize}
+        \item$\sigma(0) > 0$
+        \item$\sigma(\sigma(n))>n$
+        \end{itemize}
+        Caso inductivo:
+        \begin{itemize}
+        \item$\sigma(\sigma(0)) > \sigma(0)$\\
+        $\sigma(0) > 0$\\
+        \item$\sigma(\sigma(n)) > n$\\
+        $\sigma(\sigma(\sigma(n))) > \sigma(n)$\\
+        $\sigma(\sigma(n))>n$
+        \end{itemize}
+        
+        \begin{center}
+        \section*{Resoluci\'on Ejercicio \#2}
+        \section*{Propiedades con Inducci\'on}
+        \end{center}
+        
+        \subsection{Demostracion 1}
+        \begin{center}
+        $n+0=n$:\\
+        $\sigma(n) + 0 = \sigma(n)$\\
+        $\sigma (n + 0) = \sigma(n)$\\
+        $\sigma(n) = \sigma(n)$
+        \end{center}
+        \subsection{Demostracion 2}
+        \begin{center}
+        $n+m = m+n$:\\
+        $\sigma(\sigma(0)) + \sigma(\sigma(\sigma(0)))$ = $\sigma(\sigma(\sigma(0))) + \sigma(\sigma(0))$\\
+        $\sigma(\sigma(0) + \sigma(\sigma(\sigma(0))))$ = $\sigma(\sigma(\sigma(0)) + \sigma(\sigma(0)))$\\
+        $\sigma(\sigma(0 + \sigma(\sigma(\sigma(0)))))$ = $\sigma(\sigma(\sigma(0) + \sigma(\sigma(0))))$\\
+        $\sigma(\sigma(\sigma(\sigma(\sigma(0)))))$ = $\sigma(\sigma(\sigma(0 + \sigma(\sigma(0)))))$\\
+        $\sigma(\sigma(\sigma(\sigma(\sigma(0)))))$ = $\sigma(\sigma(\sigma(\sigma(\sigma(0)))))$
+        \end{center}
+        \subsection{Demostracion 3}
+        \begin{center}
+        $n * \sigma(\sigma(0)) = n + n$:\\
+        $\sigma(n) * \sigma(\sigma(0)) = \sigma(n) + \sigma(n)$\\
+        $\sigma(\sigma(0) + n) =  \sigma(n) + \sigma(n)$\\
+        $\sigma(\sigma(0+n)) = \sigma(n + \sigma(n))$\\
+        $\sigma(\sigma(n)) = \sigma(\sigma(n))$\\
+        $\sigma(n) + \sigma(n) = \sigma(n) + \sigma(n)$
+        \end{center}
+        
+    \end{document}
