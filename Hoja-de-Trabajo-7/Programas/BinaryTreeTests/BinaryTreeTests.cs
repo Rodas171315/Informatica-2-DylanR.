@@ -77,10 +77,11 @@ namespace BinaryTreeTests
         [Fact]
         public void TestToArray()
         {
-            IBinTree<int> sut = new BinaryIntTree(
-                5
-                , new BinaryTree<int>(1)
-                , new BinaryIntTree(33));
+            IBinTree sut = new BinaryTree(
+                5, 
+                new BinaryTree(1), 
+                new BinaryTree(33)
+                );
 
             int[] actual = sut.ToArray();
             int[] expected = new int[]{33,5,1};
