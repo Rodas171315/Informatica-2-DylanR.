@@ -3,12 +3,12 @@ using Xunit;
 
 namespace HeapSortTests
 {
-    public class UnitTest1
+    public class HeapSortTests
     {
         [Fact]
         public void Test1()
         {
-
+            
         }
     }
 }
