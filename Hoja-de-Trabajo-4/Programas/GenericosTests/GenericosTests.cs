@@ -1,13 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace GenericosTests
 {
-    [TestClass]
     public class GenericosTests
     {
-        [TestMethod]
+        [Fact]
         public void TestHead()
         {
             int[] valores = new int[]{1,2,3};
@@ -16,7 +18,7 @@ namespace GenericosTests
             Assert.Equals(1, resultado);
         }
 
-        [TestMethod]
+        [Fact]
         public void TestTail()
         {
             int[] valores = new int[] { 1, 2, 3, 4, 5 };
@@ -26,7 +28,7 @@ namespace GenericosTests
             Assert.AreEqual(resultado[0], valores[1]);
         }
 
-        [TestMethod]
+        [Fact]
         public void TestZip()
         {
             int[] valores1 = new int[] { 1, 2, 3, 4, 5 };

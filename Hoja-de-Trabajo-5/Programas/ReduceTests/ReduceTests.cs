@@ -1,12 +1,15 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace ReduceTests
 {
-    [TestClass]
     public class ReduceTests
     {
-        [TestMethod]
+        [Fact]
         public void ReduceIntTest()
         {
             //Suma de los valores de un arreglo
@@ -16,7 +19,7 @@ namespace ReduceTests
             Assert.AreEqual(reduce, 21);
         }
 
-        [TestMethod]
+        [Fact]
         public void ReduceGenericTest()
         {
             //Suma la cantidad de veces que aparece la letra <o> en los elementos del arreglo

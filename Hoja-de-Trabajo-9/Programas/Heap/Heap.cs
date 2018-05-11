@@ -8,11 +8,11 @@ namespace Heap
 {
     public class Heap
     {
-        public static int Heap;
+        public static int Heapy;
 
         public static void Heapify(int[] arreglo)
 		{
-			Heap = arreglo.Length - 1;
+			Heapy = arreglo.Length - 1;
 
 			for (int i = floop(arreglo.Length); i >= 0; i--)
 			{
@@ -20,7 +20,7 @@ namespace Heap
 			}
 		}      
       
-        public void ShiftDown(int[] arreglo, int i)
+        public static void ShiftDown(int[] arreglo, int i)
         {
 			int izquierdo = Izquierdo(i);
 			int derecho = Derecho(i);
@@ -28,7 +28,7 @@ namespace Heap
 			int indice = 0;
 
 			// Check to see which node in the tree subset has the largest value
-			if (izquierdo <= Heap && arreglo[izquierdo] > arreglo[i])
+			if (izquierdo <= Heapy && arreglo[izquierdo] > arreglo[i])
 			{
 				indice = izquierdo;
 			}
@@ -36,7 +36,7 @@ namespace Heap
 			{
 				indice = i;
 			}
-			if (derecho <= Heap && arreglo[derecho] > arreglo[indice])
+			if (derecho <= Heapy && arreglo[derecho] > arreglo[indice])
 			{
 				indice = derecho;
 			}
