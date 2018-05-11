@@ -6,7 +6,7 @@ namespace HeapSortTests
     public class HeapSortTests
     {
         [Fact]
-        public void Test1()
+        public void TestHeapSort()
         {
             
         }
