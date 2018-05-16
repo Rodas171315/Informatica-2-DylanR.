@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Heap
 {
-    public class Heap
+    public class Programa
     {
         public static int Heapy;
 
@@ -27,7 +27,6 @@ namespace Heap
 
 			int indice = 0;
 
-			// Check to see which node in the tree subset has the largest value
 			if (izquierdo <= Heapy && arreglo[izquierdo] > arreglo[i])
 			{
 				indice = izquierdo;
@@ -41,7 +40,6 @@ namespace Heap
 				indice = derecho;
 			}
 
-			// Do not make any switches if the largest node is the parent
 			if (indice != i)
 			{
 				int temp = arreglo[indice];
