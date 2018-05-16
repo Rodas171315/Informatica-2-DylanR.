@@ -12,9 +12,9 @@ namespace ParseTreeTests
         [Fact]
         public void EvaluarTest()
         {
-            ParseTree.ParseTree sut = new ParseTree.ParseTree("6+5*7+4");
+            ParseTree.ParseTree sut = new ParseTree.ParseTree("1+3*2+8");
             sut.Expandir();
-            Assert.Equal(45, sut.Evaluar());
+            Assert.Equal(15, sut.Evaluar());
         }
     }
 }
